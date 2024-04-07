@@ -1,0 +1,537 @@
+.video-page {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.main-video {
+  /* border: 1px solid red; */
+  width: 63.2%;
+  margin-left: 10px;
+  padding: 22px 22px 0px 26px;
+}
+
+/* .main-video-layout {
+  border: 1px solid yellow;
+} */
+
+.main-video-content {
+  /* border: 1px solid red; */
+  position: relative;
+  border-radius: 12px;
+  position: relative;
+  width: 852px;
+  height: 480px;
+}
+
+.mvc-videoplay {
+  border-radius: 12px;
+  width: 852px;
+  height: 480px;
+}
+
+.mvc-videoplay img {
+  width: 100%;
+  height: 100%;
+}
+
+.mvc-controller-layout {
+  /* border: 1px solid white; */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.mvc-controller {
+  padding: 0px 12px;
+}
+
+.mvc-timed-progress-bar {
+  border-top: 3px solid rgba(238, 238, 238, 0.5)
+}
+
+.mvc-controller-container {
+  /* border: 1px solid yellow; */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mvc-cc-left,
+.mvc-cc-right {
+  /* border: 1px solid white; */
+  height: 100%;
+  display: flex;
+}
+
+.mvc-cc-play,
+.mvc-cc-play-next,
+.mvc-cc-volume,
+.mvc-cc-auto-play,
+.mvc-cc-caption,
+.mvc-cc-settings,
+.mvc-cc-miniplay,
+.mvc-cc-theater-mode,
+.mvc-cc-full-screen {
+  /* border: 1px solid yellow; */
+  width: 48px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mvc-cc-duration {
+  /* border: 1px solid yellow; */
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+}
+
+
+
+.mvc-details {
+  color: rgb(241, 241, 241);
+}
+
+.mvc-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.42px;
+  margin-top: 12px;
+}
+
+.mvc-channel-subscribe-like-share-download {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.mvc-channel-subscribe {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.mvc-channel-logo {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.mvc-channel-logo>img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.mvc-channel-name-subscribers {
+  margin-right: 24px;
+}
+
+.mvc-channel-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.mvc-channel-subscribers {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+}
+
+.mvc-subscribe-button {
+  display: flex;
+  align-items: center;
+}
+
+.mvc-subscribe-button>button {
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0px 16px;
+  cursor: pointer;
+}
+
+.mvc-subscribe-button>button:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+.mvc-like-share-download {
+  /* border: 1px solid skyblue; */
+  display: flex;
+}
+
+.mvc-like-share-download>div {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.mvc-like {
+  margin: 3px 4px 0px 4px;
+}
+
+.mvc-share,
+.mvc-download {
+  margin: 3px 4px 0px 4px;
+  padding: 0px 16px 0px 10px;
+  cursor: pointer;
+}
+
+.mvc-menu {
+  margin: 3px 0px 0px 4px;
+  cursor: pointer;
+}
+
+
+.mvc-like>div:hover,
+.mvc-share:hover,
+.mvc-download:hover,
+.mvc-menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.mvc-like>div {
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.like-button>div {
+  margin-bottom: -6px;
+  margin-right: 6px;
+}
+
+.like-button {
+  /* border: 1px solid red; */
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 36px;
+  padding: 0px 16px 0px 10px;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.dislike-button {
+  /* border: 1px solid red; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  height: 36px;
+  margin-bottom: -2px;
+  padding: 0px 16px 0px 10px;
+  cursor: pointer;
+}
+
+.mvc-vertical-line {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  height: 24px;
+}
+
+.mvc-share>div,
+.mvc-download>div {
+  margin-bottom: -4px;
+  margin-right: 6px;
+}
+
+.mvc-menu {
+  padding: 0px 6px 0px 6px;
+}
+
+.mvc-description-layout {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.mvc-description-layout:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mvc-description {
+  font-size: 14px;
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 3; */
+  /* -webkit-box-orient: vertical; */
+  /* overflow: hidden; */
+}
+
+.mvc-view-posted-tag {
+  display: flex;
+  font-weight: 500;
+}
+
+.mvc-views,
+.mvc-posted-on {
+  margin-right: 6px;
+}
+
+.mvc-tags {
+  color: rgb(170, 170, 170);
+}
+
+.mvc-description-lines {
+  margin-top: 3px;
+}
+
+.mvc-description-lines-more {
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+.video-list {
+  /* border: 1px solid rgb(49, 160, 204); */
+  width: 32.5%;
+}
+
+.video-list-layout {
+  padding: 24px 24px 0px 0px;
+}
+
+.video-list-content-layout {
+  /* border: 1px solid white; */
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.vlc-img-lay {
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.vlc-img {
+  width: 168px;
+  height: 94px;
+  cursor: pointer;
+}
+
+.vlc-img>img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.vlc-duration {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  padding: 2px 4px;
+}
+
+.vlc-details {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.vlc-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vlc-name-verify {
+  display: flex;
+  align-items: flex-end;
+}
+
+.vlc-name {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.vlc-verify {
+  margin-left: 5px;
+  margin-bottom: -3px;
+}
+
+.vlc-view-posted-lay {
+  display: flex;
+  align-items: center;
+}
+
+.vlc-views,
+.vlc-posted {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.vlc-cirle-gap {
+  font-size: 2.5px;
+  margin: 3px 6px 0px 6.6px;
+}
+
+.vlc-cirle-gap i {
+  color: rgb(170, 170, 170);
+}
+
+.mvc-comments-section {
+  /* border: 1px solid white; */
+  margin-top: 28px;
+}
+
+.mvc-cs-count {
+  display: flex;
+}
+
+.mvc-cs-count>p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mvc-cs-sort {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  margin-top: -6px;
+}
+
+.mvc-cs-sort>p {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
+}
+
+.mvc-cs-add-my-comments{
+  /* border: 1px solid yellow; */
+  display: flex;
+  margin-top: 28px;
+}
+.mvc-cs-add-my-comments-input{
+  width: 100%;
+}
+.mvc-cs-add-my-comments-input input{
+  background-color: rgb(15, 15, 15);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  width: 97.5%;
+  padding-bottom: 5px;
+}
+
+.mvc-cs-add-my-comments-input input:focus-visible{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.mvc-cs-add-comments {
+  /* border: 1px solid yellow; */
+  display: flex;
+  margin-top: 28px;
+}
+
+.mvc-cs-ac-logo {
+  margin-right: 14px;
+}
+
+.mvc-cs-ac-logo img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.mvc-cs-ac-name-posted {
+  display: flex;
+  padding-top: 2px;
+}
+
+.mvc-cs-ac-name {
+  color: rgb(241, 241, 241);
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.mvc-cs-ac-posted {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+}
+
+.mvc-cs-ac-comments {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.mvc-cs-ac-like-dislike {
+  display: flex;
+  margin-top: 10px;
+}
+
+.mvc-cs-ac-like-logo {
+  margin-left: -4px;
+  margin-right: 4px;
+}
+
+.mvc-cs-ac-like {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+  margin-top: 4px;
+  margin-right: 12px;
+}
+
+.mvc-cs-ac-reply {
+  color: rgb(241, 241, 241);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  margin-left: 24px;
+}
+
+.mvc-cs-ac-replies {
+  color: rgb(62, 166, 255);
+  display: flex;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+.mvc-cs-ac-sort-down>i {
+  color: rgb(62, 166, 255);
+  margin: 0px 14px 0px 8px;
+}
+
+.mvc-cs-ac-replies-text {
+  font-size: 14px;
+  font-weight: 500;
+}

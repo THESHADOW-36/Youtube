@@ -1,0 +1,253 @@
+.sign-up-layout {
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px;
+  color: rgb(32, 33, 36);
+  width: 368px;
+  margin: auto;
+  padding: 36px 40px 50px 40px;
+  margin-top: 50px;
+}
+
+.su-google-img {
+  display: flex;
+  justify-content: center;
+}
+
+.su-google-img img {
+  width: 75px;
+  height: 24px;
+}
+
+.su-text {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.su-create-google-account {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.su-input-titles {
+  font-size: 16px;
+  letter-spacing: 0.1;
+  margin: 40px 0px -12px 4px;
+}
+
+.su-input {
+  position: relative;
+  margin-top: 20px;
+}
+
+.su-input {
+  position: relative;
+  margin-top: 20px;
+}
+
+.su-input>label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: rgb(95, 99, 104);
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.su-input>input {
+  outline-color: rgb(26, 115, 232);
+  background-color: transparent;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 4px;
+  width: 336px;
+  height: 28px;
+  font-size: 16px;
+  padding: 13px 15px;
+}
+
+.su-input input:focus~label,
+.su-input input:valid~label {
+  /* border: 1px solid black; */
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  background-color: white;
+  color: rgb(26, 115, 232);
+  padding: 0px 5px;
+}
+
+.su-dob-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.su-dob-input {
+  position: relative;
+  margin-top: 20px;
+}
+
+.su-dob-input>label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: rgb(95, 99, 104);
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.su-dob-input>input {
+  outline-color: rgb(26, 115, 232);
+  background-color: transparent;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 4px;
+  width: 68px;
+  height: 28px;
+  font-size: 16px;
+  padding: 13px 15px;
+}
+
+.su-dob-input input:focus~label,
+.su-dob-input input:valid~label {
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  background-color: white;
+  color: rgb(26, 115, 232);
+  padding: 0px 5px;
+}
+
+.su-dob-input input::-webkit-inner-spin-button,
+.su-dob-input input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+
+.su-show-forget-pass {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.su-show-pass {
+  display: flex;
+  margin-top: 10px;
+}
+
+.su-sp-checkbox input {
+  /* border: 2px solid rgb(95, 99, 104); */
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.su-show-pass>p {
+  margin-left: 18px;
+}
+
+
+.su-privacy-terms {
+  margin-top: 40px;
+}
+
+.su-privacy {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.su-p-checkbox input {
+  /* border: 2px solid rgb(95, 99, 104); */
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.su-forget-password {
+  color: rgb(26, 115, 232);
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.su-privacy>p {
+  margin-left: 18px;
+}
+
+.su-privacy-details {
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.su-privacy-details>p {
+  margin-top: 6px;
+}
+
+.su-privacy-details>p>span {
+  color: rgb(13, 112, 243);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.su-guest-mode-layout {
+  margin-top: 40px;
+}
+
+.su-guest-mode {
+  color: rgb(95, 99, 104);
+  font-size: 14px;
+}
+
+.su-learn-more {
+  color: rgb(26, 115, 232);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.su-create-one-next {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.su-creat-one-button {
+  background-color: white;
+  border: none;
+  color: rgb(26, 115, 232);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+}
+
+.su-creat-one-button:hover {
+  background-color: rgba(26, 115, 232, 0.05);
+}
+
+.su-next-button {
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(26, 115, 232);
+  color: white;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  padding: 0px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.su-next-button:hover {
+  background-color: rgb(7, 102, 227);
+  box-shadow: 1px 2px 5px px rrgb(191, 191, 191);
+  transform: scale(1.005);
+}
