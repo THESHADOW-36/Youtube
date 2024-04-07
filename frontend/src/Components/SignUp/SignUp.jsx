@@ -21,6 +21,7 @@ const SignUp = () => {
       if (userData.password === userData.confirmPassword) {
         try {
           const response = await api.post("/auth/register", { userData })
+          console.log(response)
           if (response.data.success) {
             alert("Registration Successfull")
             router("/sign-in")
@@ -28,6 +29,7 @@ const SignUp = () => {
             throw new Error("Something went wrong...")
           }
         } catch (error) {
+          console.log(error)
           toast.error(error?.response.data.message)
         }
       } else {
