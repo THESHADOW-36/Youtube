@@ -11,6 +11,7 @@ const SearchBar = () => {
   const router = useNavigate();
 
   const { state, Logout } = useContext(AuthContext)
+  console.log("state :", state)
 
   function signInSite() {
     router("/sign-in")
@@ -107,7 +108,7 @@ const SearchBar = () => {
           </div>
 
           <div >
-            {state?.user?.id ?
+            {state?.user?._id ?
               <div className="sb-create-notify-signin">
                 <div className="sb-create">
                   <img src={create} alt="" />

@@ -23,10 +23,10 @@ const SignIn = () => {
     if (userData.email && userData.password) {
       try {
         const response = await api.post("/auth/login", { userData })
-        if (response.data.success) {
+        if (response?.data?.success) {
           localStorage.setItem("my-token", JSON.stringify(response.data.token))
           Login(response.data.user)
-          console.log("response data", response.data)
+          // console.log("response data", response?.data.user)
           toast.success("Login Successful")
           router("/")
         } else {

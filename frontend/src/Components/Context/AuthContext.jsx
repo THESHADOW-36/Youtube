@@ -31,19 +31,23 @@ const ParentAuthContext = ({ children }) => {
     }
 
     useEffect(() => {
+        const token = JSON.parse(localStorage.getItem("my-token"))
+
+        const headers = { Authorization: 'Bearer ' + token }
+
         async function getCurrentUser() {
             try {
-                const response = await api.post("/auth/get-current-user", { token })
-                if (response.data.success) {
-                    console.log(response.data.user, "response.data.user")
-                    Login(response.data.user)
+                const response = await api.get("/auth/get-current-user", { headers })
+                if (response.data?.success) {
+                    console.log(response.data?.user, "response.data.user")
+                    Login(response?.data?.user)
                 }
             } catch (error) {
-                toast.error(error.response.data.message)
+                toast.error(error?.response?.data?.message)
+                console.log("error :", error)
             }
         }
 
-        const token = JSON.parse(localStorage.getItem("my-token"))
         if (token) {
             getCurrentUser();
         }

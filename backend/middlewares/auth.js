@@ -24,10 +24,10 @@ export const protecter = asyncHandler(async (req, res, next) => {
    }
 })
 
-export const authenticate = asyncHandler(async (req, res, next) => {
-   if (req.user.role === "Admin" || req.user.role === "Super Admin") {
-      next();
-   } else {
-      return next(new ErrorResponse(`You dont have access to this route with user role ${req.user.role}`, 403));
-   }
-})
+// export const authenticate = asyncHandler(async (req, res, next) => {
+//    if (req.user.role === "Admin" || req.user.role === "Super Admin") {
+//       next();
+//    } else {
+//       return next(new ErrorResponse(`You dont have access to this route with user role ${req.user.role}`, 403));
+//    }
+// })
