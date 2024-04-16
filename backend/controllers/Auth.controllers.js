@@ -4,7 +4,7 @@ import asyncHandler from "../middlewares/async.js";
 import ErrorResponse from "../utils/errorResponse.js";
 
 export const Register = asyncHandler(async (req, res, next) => {
-    const { firstname, surname, day, month, year, gender, email, password } = req.body.userData;
+    const { firstname, surname, day, month, year, gender, email, password } = req.body;
     if (!firstname || !surname || !day || !month || !year || !gender || !email || !password) return next(new ErrorResponse("All fields are mandatory...", 401));
 
     const user = await User.create({ firstname, surname, day, month, year, gender, email, password })
@@ -13,7 +13,7 @@ export const Register = asyncHandler(async (req, res, next) => {
 })
 
 export const Login = async (req, res) => {
-    const { email, password } = req.body.userData;
+    const { email, password } = req.body;
     if (!email || !password) return next(new ErrorResponse("All fields are mandatory", 401));
 
     const user = await User.findOne({ email }).select('+password');
@@ -41,7 +41,7 @@ const sendTokenResponse = (user, status, res) => {
         option.secure = true
     }
 
-    return res.status(status).cookie('token', token, option).json({ success: true, token });
+    return res.status(status).cookie('token', token, option).json({ success: true, token, user });
 }
 
 export const getCurrentUser = asyncHandler(async (req, res, next) => {

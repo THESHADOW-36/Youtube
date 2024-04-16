@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import "./SignIn.css"
 import { useNavigate } from "react-router-dom";
 import googleLogo from "./../../Images/Google.png"
-import api from "../Helpers/Axios.Config";
 import toast from "react-hot-toast"
 import { AuthContext } from "../Context/AuthContext";
+import { API } from "../Constant/Network";
+import { Url } from "../Constant/Url";
 
 const SignIn = () => {
   const [userData, setUserData] = useState({ email: "", password: "" });
@@ -21,20 +22,25 @@ const SignIn = () => {
   const loginSubmit = async (event) => {
     event.preventDefault();
     if (userData.email && userData.password) {
-      try {
-        const response = await api.post("/auth/login", { userData })
-        if (response?.data?.success) {
-          localStorage.setItem("my-token", JSON.stringify(response.data.token))
-          Login(response.data.user)
-          // console.log("response data", response?.data.user)
-          toast.success("Login Successful")
-          router("/")
-        } else {
-          throw new Error("Something went wrong...")
+      API.post(Url.login, userData).subscribe({
+        async next(response) {
+          await localStorage.setItem("my-token", response.token);
+          if (response.token) {
+            Login(response.user)
+            toast.success("Logged in Successfully!");
+            setUserData({ email: "", password: "" });
+            router('/')
+          } else {
+            toast.error("Please Check Credentials!")
+          }
+        },
+        error(error) {
+          toast.error(error.error);
+        },
+        complete() {
+          console.log("complete");
         }
-      } catch (error) {
-        toast.error(error?.response.data.message)
-      }
+      })
     } else {
       toast.error("All Fields are mandatory")
     }

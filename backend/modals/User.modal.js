@@ -47,6 +47,15 @@ const User = new Schema({
     year: {
         type: Number
     },
+    logo: {
+        type: String
+    },
+    subscriber: {
+        type: Number
+    },
+    verified: {
+        type: Number
+    },
     createdAt: {
         type: Date,
         default: Date.now

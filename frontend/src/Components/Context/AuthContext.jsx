@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer } from 'react'
 import toast from 'react-hot-toast';
-import api from '../Helpers/Axios.Config';
+import { API } from '../Constant/Network';
+import { Url } from '../Constant/Url'
 
 export const AuthContext = createContext();
 
@@ -37,7 +38,7 @@ const ParentAuthContext = ({ children }) => {
 
         async function getCurrentUser() {
             try {
-                const response = await api.get("/auth/get-current-user", { headers })
+                const response = await API.get(Url.currentUser)
                 if (response.data?.success) {
                     console.log(response.data?.user, "response.data.user")
                     Login(response?.data?.user)

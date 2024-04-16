@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./SignUp.css"
 import { useNavigate } from "react-router-dom"
 import googleLogo from "./../../Images/Google.png"
-import api from "../Helpers/Axios.Config";
 import toast from "react-hot-toast"
+import { API } from "../Constant/Network";
+import { Url } from "../Constant/Url";
 
 const SignUp = () => {
   const [userData, setUserData] = useState({ firstname: "", surname: "", day: "", month: "", year: "", gender: "", email: "", password: "", confirmPassword: "" });
@@ -19,19 +20,24 @@ const SignUp = () => {
     event.preventDefault();
     if (userData.firstname && userData.surname && userData.day && userData.month && userData.year && userData.gender && userData.email && userData.password && userData.confirmPassword) {
       if (userData.password === userData.confirmPassword) {
-        try {
-          const response = await api.post("/auth/register", { userData })
-          console.log(response)
-          if (response.data.success) {
-            alert("Registration Successfull")
-            router("/sign-in")
-          } else {
-            throw new Error("Something went wrong...")
+        API.post(Url.register, userData).subscribe({
+          async next(response) {
+            console.log(response.token)
+            await localStorage.setItem("my-token", response.token);
+            if (response.success) {
+              alert("Registration Successfull")
+              router("/sign-in")
+            } else {
+              throw new Error("Something went wrong...")
+            }
+          },
+          error(error) {
+            toast.error(error.error);
+          },
+          complete() {
+            console.log("complete");
           }
-        } catch (error) {
-          console.log(error)
-          toast.error(error?.response.data.message)
-        }
+        })
       } else {
         toast.error("Password is incorrect")
       }
